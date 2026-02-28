@@ -5,7 +5,28 @@
     <link rel="icon" href="../assets/image.jpg">
 </head>
 <body>
-    <script src="./script.js">
+    <p id="para">Lorem ipsum dolor sit amet.</p>
+    <ul id="list"></ul>
+    <button id="btn">click me</button>
+    <!-- <p class="sai">Lorem, ipsum dolor.</p> -->
+    <script >
+        // document.getElementById("para").innerText="hello"
+        // document.getElementsByClassName("ss").innerText="hello world"
+        // document.getElementById("para").innerHTML="<p>hello</p>"
+    //     var res=document.getElementById("para");
+    //     console.log(res)
+    //    document.getElementById("para").style.color="red";
+    //    document.getElementById("para").style.background="black";
+    //     document.getElementById("para").style.fontSize="20px"
+    //     var para2= document.getElementsByClassName("para");
+    //     console.log(para2)
+    const btn =document.getElementById("btn");
+    btn.addEventListener("click",function(){
+        const li = document.createElement("li");
+    li.innerText="new li element";
+    document.getElementById("list").append(li);
+    })
+    
     </script>
 </body>
 </html>

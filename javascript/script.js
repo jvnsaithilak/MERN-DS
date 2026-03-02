@@ -157,23 +157,87 @@
 // }
 
 // for ..of
-var arr=[10,20,30,40];
-for(let i of arr){
-     console.log(i);
-}
+// var arr=[10,20,30,40];
+// for(let i of arr){
+//      console.log(i);
+// }
 
-// map
-var arr=[1,2,3,4,5]
-var double =arr.map((val)=>(val*2));
-console.log(double);
+// // map
+// var arr=[1,2,3,4,5]
+// var double =arr.map((val)=>(val*2));
+// console.log(double);
 
-// filter
-var arr=[1,2,3,4,5]
-var even =arr.filter((val)=>(val%2===0));
-console.log(even);
+// // filter
+// var arr=[1,2,3,4,5]
+// var even =arr.filter((val)=>(val%2===0));
+// console.log(even);
 
-// reduce
-var arr=[1,2,3,4,5]
-var total =arr.reduce((sum,val)=>(sum+val),0);
-console.log(total);
+// // reduce
+// var arr=[1,2,3,4,5]
+// var total =arr.reduce((sum,val)=>(sum+val),0);
+// console.log(total);
 
+// promise
+// const promise= new Promise((resolve,reject)=>{
+//      var success=true;
+//      if(success){
+//           resolve("Task completed");
+//      }
+//      else{
+//           reject("Task not completed");
+//      }
+// })
+// promise.then((message)=>{
+//      console.log(message);
+// }).catch((err)=>{
+//      console.log(err);
+// })
+
+// Settimeout
+const promise= new Promise((resolve,reject)=>{
+     var success=true;
+     if(success){
+          setTimeout(()=>{
+               resolve("Task completed");
+          },2000)
+          
+     }
+     else{
+          reject("Task not completed");
+     }
+     console.log("task")
+})
+promise.then((message)=>{
+     console.log(message);
+}).catch((err)=>{
+     console.log(err);
+})
+
+// setInterval
+// var count=1;
+// const intervalcount=setInterval(()=>{
+//      console.log(count);
+//      count++;
+//      if(count>5){
+//           clearInterval(intervalcount);
+//      }
+// },2000)
+
+// const getData = ()=>{
+//      return fetch("https://jsonplaceholder.typicode.com/users")
+// }
+// getData().then((res)=>res.json())
+// .then((data)=>console.log(data))
+// .catch((err)=>console.log(err));
+
+// async and await
+// const getData = async()=>{
+//      try {
+//           const res = await fetch("https://jsonplaceholder.typicode.com/users");
+//           const data=await res.json();
+//           console.log(data);
+//      } catch (error) {
+//           console.log(error);
+//      }
+// }
+// getData();

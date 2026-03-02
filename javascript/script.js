@@ -194,24 +194,24 @@
 // })
 
 // Settimeout
-const promise= new Promise((resolve,reject)=>{
-     var success=true;
-     if(success){
-          setTimeout(()=>{
-               resolve("Task completed");
-          },2000)
+// const promise= new Promise((resolve,reject)=>{
+//      var success=true;
+//      if(success){
+//           setTimeout(()=>{
+//                resolve("Task completed");
+//           },2000)
           
-     }
-     else{
-          reject("Task not completed");
-     }
-     console.log("task")
-})
-promise.then((message)=>{
-     console.log(message);
-}).catch((err)=>{
-     console.log(err);
-})
+//      }
+//      else{
+//           reject("Task not completed");
+//      }
+//      console.log("task")
+// })
+// promise.then((message)=>{
+//      console.log(message);
+// }).catch((err)=>{
+//      console.log(err);
+// })
 
 // setInterval
 // var count=1;

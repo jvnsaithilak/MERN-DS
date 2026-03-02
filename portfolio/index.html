@@ -3,9 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio website</title>
+    <title>Dashboard</title>
+    <style>
+        body{
+            background-image: url("../assets/WhatsApp Image 2026-03-02 at 12.25.08 PM.jpeg");
+            background-size: 1000px;
+            background-repeat: no-repeat;
+            background-position: center;
+            color:  #220c0c;
+        }
+        a{
+            text-decoration: none;
+            padding: 10px 15px;
+            color: #220c0c;
+            background-color: transparent;
+        }
+        .div1{
+            border: none;
+            padding: 20px;
+            text-align: end;
+        }
+        .div1_2{
+            text-align: start;
+        }
+        .top-section{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 40px;
+        }
+        .text-content{
+            width: 60%;
+            padding: 10px 10px;
+        }
+        .image-content{
+            width: 40%;
+            display: flex;
+            justify-content: flex-end;  
+        }
+        .profile-pic{
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+        }
+    </style>
 </head>
 <body>
+    <header> 
+        <nav>
+           <div class="div1">
+            <div class="div1_2">
+                <link rel="logo" href="#logo">portofio
+            </div>
+            <div>
+                <a href="#home">Home</a>
+                <a href="#contact">contact</a>
+                <a href="#about">about</a>
+                <a href="#skills">skills</a>
+                <a href="#projects">projects</a>
+            </div>    
+            </div>
+        </nav>
+        
+    </header>
+    <div class="top-section">
+    <div class="text-content">
+        <h1>Jonnalagadla V N Sai Thilak</h1>
+        <h3>About Me</h3>
+        <p>I am very interested in learning new technologies and improving my technical skills.</p>
+        <p>Apart from academics, I am a quick learner, a self-motivated person, and I like working both independently and in a team.</p>
+    </div>
+
+    <div class="image-content">
+        <img src="../assets/Screenshot 2024-11-10 205034.png" alt="Sai Thilak" class="profile-pic">
+    </div>
+</div>
     
 </body>
 </html>

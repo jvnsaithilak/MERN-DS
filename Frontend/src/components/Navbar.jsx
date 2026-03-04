@@ -19,6 +19,12 @@ const Navbar = () => {
                 <li className="list">
                     <Link to="/Service" className="link">Service</Link>
                 </li>
+                <li className="list">
+                    <Link to="/hooks" className="link">Hooks</Link>
+                </li>
+                <li className="list">
+                    <Link to="/Login" className="link">Login</Link>
+                </li>
             </ul>
         </nav>
     </div>

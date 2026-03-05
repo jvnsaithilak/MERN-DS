@@ -1,6 +1,6 @@
 import React from 'react'
 
-const child = ({name,age,isActive,food,contact}) => {
+const child = ({name,age,isActive,food,contact,sendMessage}) => {
   return (
     <div>
       <h1>Name:{name}</h1>
@@ -19,6 +19,7 @@ const child = ({name,age,isActive,food,contact}) => {
       <h1>Contact</h1>
       <p>Mobile no:{contact.mobile}</p>
       <p>Email : {contact.email}</p>
+      <button onClick={()=>{sendMessage("Message from Child")}}>send</button>
     </div>
   )
 }

@@ -12,6 +12,8 @@ import Form from './hooks/Form';
 import Effect from './hooks/Effect';
 import EffectWithApi from './hooks/EffectWithApi';
 import Login from './Auth/Login';
+import Ref from './hooks/Ref';
+import Reducer from './hooks/Reducer';
 
 const App = () => {
   const element=<div>Hello world</div>;
@@ -28,6 +30,8 @@ const App = () => {
           <Route path='form' element={<Form/>}> </Route>
           <Route path='useEffect' element={<Effect/>}> </Route>
           <Route path='useEffectWithApi' element={<EffectWithApi/>}> </Route>
+          <Route path='useRef' element={<Ref/>}> </Route>
+          <Route path='useReducer' element={<Reducer/>}> </Route>
         </Route>
         <Route path='/Login' element={<Login/>}></Route>
 

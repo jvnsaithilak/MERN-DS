@@ -14,6 +14,10 @@ import EffectWithApi from './hooks/EffectWithApi';
 import Login from './Auth/Login';
 import Ref from './hooks/Ref';
 import Reducer from './hooks/Reducer';
+import Memo from './hooks/Memo';
+import Callback from './hooks/Callback';
+import Signup from './Auth/Signup';
+import Todo from './components/Todo';
 
 const App = () => {
   const element=<div>Hello world</div>;
@@ -25,6 +29,9 @@ const App = () => {
         <Route path='/contact' element={<Contact/>}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='/service' element={<Service/>}></Route>
+        <Route path='/todo' element={<Todo/>}></Route>
+        <Route path='/Login' element={<Login/>}></Route>
+        <Route path='/Signup' element={<Signup/>}></Route>
         <Route path='/hooks' element={<Hooks/>}>
           <Route path='useState' element={<State/>}></Route>
           <Route path='form' element={<Form/>}> </Route>
@@ -32,9 +39,9 @@ const App = () => {
           <Route path='useEffectWithApi' element={<EffectWithApi/>}> </Route>
           <Route path='useRef' element={<Ref/>}> </Route>
           <Route path='useReducer' element={<Reducer/>}> </Route>
+          <Route path='useMemo' element={<Memo/>}> </Route>
+          <Route path='useCallback' element={<Callback/>}> </Route>
         </Route>
-        <Route path='/Login' element={<Login/>}></Route>
-
       </Routes>
     </>
   )

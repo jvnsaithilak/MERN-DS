@@ -18,9 +18,11 @@ const Home = () => {
       greeting:"hello"
     },
     te:{
-      greeting:"hello"
+      greeting:"నమస్తే"
     },
-
+    ta:{
+      greeting:"வணக்கம்"
+    }
 
   }
   const text=translate[language];
@@ -30,7 +32,7 @@ const Home = () => {
       <p>Greeting:{text.greeting}</p>
       <button onClick={()=>changeLanguage('en')}>English</button>
       <button onClick={()=>changeLanguage('te')}>telugu</button>
-      <button onClick={()=>changeLanguage('ta')}>tamil</button>
+      <button onClick={()=>changeLanguage('ta')}>tamil</button><br /><br />
       <button onClick={handleClick}>About</button>
       <h1>{theme}</h1>
       <h2>user Details</h2>

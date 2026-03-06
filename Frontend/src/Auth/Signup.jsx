@@ -1,9 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Signup = () => {
+  const [user,setUser] = useState({
+    name:'',
+    email:'',
+    password:''
+  });
+  const handleChange=(e)=>{
+    setUser({...user,[e.target.name]:e.target.value})
+  }
+  const handleSubmit=(e)=>{
+    e.preventDefault
+    console.log(user);
+  }
   return (
     <div>
-      signup
+      <form onSubmit={handleSubmit}>
+        <label>Name:</label>
+        <input type="text" 
+        placeholder='Enter the name'
+        name="name"
+        onChange={handleChange}
+        />
+        <br /><br />
+        <label>Email:</label>
+        <input type="email" 
+        placeholder='Enter the email'
+        name="email"
+        onChange={handleChange}
+        />
+        <br /><br />
+        <label>Password</label>
+        <input type="password" 
+        placeholder='Enter the password'
+        name="password"
+        onChange={handleChange}
+        />
+        <br /><br />
+        <button type='submit'>submit</button>
+      </form>
     </div>
   )
 }

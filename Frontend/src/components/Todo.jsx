@@ -5,9 +5,9 @@ const Todo = () => {
     const [task,setTask]= useState('');
     const [todos,setTodos] = useState([])
     const [edit,setEdit]= useState(null);
-    const API=`http://localhost:3000/api/todo/`
+    const API=`https://mern-ds-ozaj.onrender.com`
     const fetchTodo=async()=>{
-        const res=await axios.get(`http://localhost:3000/api/todo/`);
+        const res=await axios.get(`${API}/api/todo/`);
         setTodos(res.data);
     }
     useEffect(()=>{
@@ -18,20 +18,20 @@ const Todo = () => {
     const handleAddOrEdit=async(e)=>{
         e.preventDefault();
         if(edit){
-            await axios.put(`${API}update/${edit}`,{task});
+            await axios.put(`${API}/api/todo/update/${edit}`,{task});
             setEdit(null);
         }
         else{
-            await axios.post(`${API}create`,{task})
+            await axios.post(`${API}/api/todo/create`,{task})
         }
         setTask('');
         fetchTodo();
     };
     const handleDelete=async(id)=>{
-        await axios.delete(`${API}delete/${id}`)
+        await axios.delete(`${API}/api/todo/delete/${id}`)
     };
     const handleToggleStatus= async(todo)=>{
-        await axios.put(`${API}update/${todo._id}`,{
+        await axios.put(`${API}/api/todo/update/${todo._id}`,{
             completed:!todo.completed
         })
         fetchTodo();
